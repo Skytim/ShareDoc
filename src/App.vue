@@ -1,8 +1,13 @@
 <template>
-  <div id="app">
-    <Editor />
-    <div v-html="compiledMarkdown"></div>
-  </div>
+
+    <div class="row">
+      <div class="col">
+        <Editor />
+      </div>
+      <div class="col">
+        <div v-html="compiledMarkdown"></div>
+      </div>
+    </div>
 </template>
 
 <script>
