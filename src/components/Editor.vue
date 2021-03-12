@@ -1,12 +1,16 @@
 <template>
-  <codemirror :value="editorText" @input="update" :options="cmOptions" />
+  <codemirror class="" :value="editorText" @input="update" :options="cmOptions" />
 </template>
 <script>
 import { mapActions, mapState } from "vuex";
 import { codemirror } from "vue-codemirror";
+// import language js
+import 'codemirror/mode/javascript/javascript.js'
 
 // import base style
 import "codemirror/lib/codemirror.css";
+// import base style
+import 'codemirror/theme/eclipse.css';
 import _ from "lodash";
 export default {
   name: "TextArea",
@@ -17,8 +21,8 @@ export default {
     return {
       cmOptions: {
         tabSize: 4,
-        mode: "text/javascript",
-        theme: "base16-dark",
+        mode: "javascript",
+        theme: "eclipse",
         lineNumbers: true,
         line: true,
         // more CodeMirror options...
@@ -38,9 +42,9 @@ export default {
   },
 };
 </script>
-<style scoped>
-textarea {
-  height: 100vh;
+<style >
+.CodeMirror  {
+  height: 900vh;
   width: 100vh;
 }
 </style>
