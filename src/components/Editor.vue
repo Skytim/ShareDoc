@@ -19,3 +19,9 @@ export default {
   },
 };
 </script>
+<style scoped>
+textarea {
+  height: 100vh;
+  width: 100vh;
+}
+</style>
