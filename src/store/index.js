@@ -2,14 +2,16 @@ import Vue from "vue";
 import Vuex from "vuex";
 import marked from "marked";
 import hljs from "highlight.js";
+import store from "store2";
 Vue.use(Vuex);
 
 export default new Vuex.Store({
     state: {
-        editorText: "",
+        editorText: store.get("editorText") || "",
     },
     mutations: {
         update(state, value) {
+            store.set("editorText", value);
             state.editorText = value;
         },
     },
