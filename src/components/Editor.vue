@@ -48,7 +48,7 @@ export default {
 </script>
 <style >
 .CodeMirror {
-  height: 900vh;
-  width: 100vh;
+  height: 98vh;
+  width: 90vh;
 }
 </style>
