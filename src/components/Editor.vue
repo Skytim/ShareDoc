@@ -3,6 +3,7 @@
     class=""
     :value="editorText"
     @input="update"
+    @ready="onCmReady"
     :options="cmOptions"
   />
 </template>
@@ -17,6 +18,11 @@ import "codemirror/lib/codemirror.css";
 // import base style
 import "codemirror/theme/eclipse.css";
 import _ from "lodash";
+
+import "codemirror/addon/hint/show-hint";
+import "codemirror/addon/hint/show-hint.css";
+import "codemirror/addon/hint/javascript-hint.js";
+import "codemirror/addon/hint/anyword-hint";
 export default {
   name: "TextArea",
   components: {
@@ -34,6 +40,11 @@ export default {
     };
   },
   methods: {
+    onCmReady(cm) {
+      cm.on("keypress", () => {
+         cm.showHint({completeSingle:false})
+      });
+    },
     debouceUpdate() {
       _.debounce(function () {
         this.update;
