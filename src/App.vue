@@ -1,27 +1,9 @@
 <template>
-
-    <div class="row">
-      <div class="col">
-        <Editor />
-      </div>
-      <div class="col">
-        <div v-html="compiledMarkdown"></div>
-      </div>
+  <div id="app">
+    <div id="nav">
+      <router-link to="/">Home</router-link> |
+      <router-link to="/about">About</router-link>
     </div>
+    <router-view/>
+  </div>
 </template>
-
-<script>
-import { mapGetters } from "vuex";
-import Editor from "./components/Editor";
-export default {
-  name: "App",
-  components: {
-    Editor,
-  },
-  computed: {
-    ...mapGetters({
-      compiledMarkdown: "compiledMarkdown",
-    }),
-  },
-};
-</script>
