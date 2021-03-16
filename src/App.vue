@@ -1,30 +1,30 @@
 <template>
   <div id="app">
-    <nav class="navbar navbar-expand-md navbar-dark bg-dark">
-      <a class="navbar-brand" href="#">Navbar</a>
-      <button
-        class="navbar-toggler"
-        type="button"
-        data-toggle="collapse"
-        data-target="#navbarsExampleDefault"
-        aria-controls="navbarsExampleDefault"
-        aria-expanded="false"
-        aria-label="Toggle navigation"
-      >
-        <span class="navbar-toggler-icon"></span>
-      </button>
+    <div>
+      <b-navbar toggleable="lg">
+        <b-link> </b-link>
+        <b-link href="javascript:void(0)" to="/">
+          <b-icon icon="book"></b-icon>
+         ShareDoc
+        </b-link>
 
-      <div class="collapse navbar-collapse" id="navbarsExampleDefault">
-        <ul class="navbar-nav mr-auto">
-          <li class="nav-item active">
-            <router-link to="/">Home</router-link>
-          </li>
-          <li class="nav-item active">
-            <router-link to="/about">About</router-link>
-          </li>
-        </ul>
-      </div>
-    </nav>
+        <b-navbar-toggle target="nav-collapse"></b-navbar-toggle>
+        <b-collapse id="nav-collapse" is-nav>
+          <b-navbar-nav>
+           <b-nav-item href="javascript:void(0)" to="/">Edit</b-nav-item>
+            <b-nav-item href="javascript:void(0)" to="about"
+              >Mirror</b-nav-item
+            >
+            <b-nav-item href="javascript:void(0)" to="/">Readonly</b-nav-item>
+
+          </b-navbar-nav>
+        </b-collapse>
+      </b-navbar>
+    </div>
     <router-view />
   </div>
 </template>
+<script>
+
+</script>
+
