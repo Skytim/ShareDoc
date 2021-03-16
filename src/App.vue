@@ -5,19 +5,19 @@
         <b-link> </b-link>
         <b-link href="javascript:void(0)" to="/">
           <b-icon icon="book"></b-icon>
-         ShareDoc
+          ShareDoc
         </b-link>
 
         <b-navbar-toggle target="nav-collapse"></b-navbar-toggle>
         <b-collapse id="nav-collapse" is-nav>
-          <b-navbar-nav>
-           <b-nav-item href="javascript:void(0)" to="/">Edit</b-nav-item>
-            <b-nav-item href="javascript:void(0)" to="about"
-              >Mirror</b-nav-item
-            >
-            <b-nav-item href="javascript:void(0)" to="/">Readonly</b-nav-item>
-
-          </b-navbar-nav>
+          <b-navbar-nav> </b-navbar-nav>
+          <div class="ml-3">
+            <b-button-group>
+              <b-button variant="success" to="/">Edit</b-button>
+              <b-button variant="info" to="about">Mirror</b-button>
+              <b-button variant="warning">Readonly</b-button>
+            </b-button-group>
+          </div>
         </b-collapse>
       </b-navbar>
     </div>
@@ -25,6 +25,5 @@
   </div>
 </template>
 <script>
-
 </script>
 
