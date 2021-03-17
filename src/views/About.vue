@@ -3,8 +3,8 @@
       <div class="col">
         <Editor />
       </div>
-      <div class="col">
-           <Editor />
+      <div class="col overflow-auto display">
+          <div v-html="compiledMarkdown"></div>
       </div>
     </div>
 </template>
@@ -24,3 +24,14 @@ export default {
   },
 };
 </script>
+
+<style scoped>
+/* The solution */
+.row {
+  overflow: hidden;
+}
+.display {
+  height: 98vh;
+  width: 90vh;
+}
+</style>
