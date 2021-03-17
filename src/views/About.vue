@@ -4,7 +4,7 @@
         <Editor />
       </div>
       <div class="col">
-        <div v-html="compiledMarkdown"></div>
+           <Editor />
       </div>
     </div>
 </template>
